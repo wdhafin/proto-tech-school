@@ -1,0 +1,62 @@
+{
+  "id": "6e65d45b-6cf5-47ec-b4de-a398d50b39ec",
+  "brand": "Dell",
+  "name": "Latitude",
+  "cpu": {
+    "brand": "AMD",
+    "name": "Ryzen 3 PRO 3200GE",
+    "number_cores": 3,
+    "number_threads": 5,
+    "min_ghz": 3.297160078203608,
+    "max_ghz": 4.139998372890013
+  },
+  "ram": {
+    "value": "51",
+    "unit": "GIGABYTE"
+  },
+  "gpus": [
+    {
+      "brand": "Nvidia",
+      "name": "RTX 2060",
+      "min_ghz": 1.1474804370438128,
+      "max_ghz": 1.9092436263023358,
+      "memory": {
+        "value": "5",
+        "unit": "GIGABYTE"
+      }
+    }
+  ],
+  "storages": [
+    {
+      "driver": "SSD",
+      "memory": {
+        "value": "465",
+        "unit": "GIGABYTE"
+      }
+    },
+    {
+      "driver": "HDD",
+      "memory": {
+        "value": "5",
+        "unit": "TERABYTE"
+      }
+    }
+  ],
+  "screen": {
+    "size_inch": 14.725237,
+    "resolution": {
+      "width": 4785,
+      "height": 2692
+    },
+    "panel": "OLED",
+    "multitouch": true
+  },
+  "keyboard": {
+    "layout": "QWERTZ",
+    "backlit": false
+  },
+  "weight_kg": 2.3494399432240236,
+  "price_usd": 2181.36495576167,
+  "release_year": 2017,
+  "updated_at": "2021-02-19T10:44:42.927174858Z"
+}
