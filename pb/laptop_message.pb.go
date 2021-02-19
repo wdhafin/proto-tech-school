@@ -8,7 +8,6 @@ package pb
 
 import (
 	proto "github.com/golang/protobuf/proto"
-	pb "github.com/wdhafin/proto-tech-school/pb"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -32,15 +31,15 @@ type Laptop struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string        `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Brand    string        `protobuf:"bytes,2,opt,name=brand,proto3" json:"brand,omitempty"`
-	Name     string        `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
-	Cpu      *pb.CPU       `protobuf:"bytes,4,opt,name=cpu,proto3" json:"cpu,omitempty"`
-	Ram      *pb.Memory    `protobuf:"bytes,5,opt,name=ram,proto3" json:"ram,omitempty"`
-	Gpus     []*pb.GPU     `protobuf:"bytes,6,rep,name=gpus,proto3" json:"gpus,omitempty"`
-	Storages []*pb.Storage `protobuf:"bytes,7,rep,name=storages,proto3" json:"storages,omitempty"`
-	Screen   *pb.Screen    `protobuf:"bytes,8,opt,name=screen,proto3" json:"screen,omitempty"`
-	Keyboard *pb.Keyboard  `protobuf:"bytes,9,opt,name=keyboard,proto3" json:"keyboard,omitempty"`
+	Id       string     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Brand    string     `protobuf:"bytes,2,opt,name=brand,proto3" json:"brand,omitempty"`
+	Name     string     `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
+	Cpu      *CPU       `protobuf:"bytes,4,opt,name=cpu,proto3" json:"cpu,omitempty"`
+	Ram      *Memory    `protobuf:"bytes,5,opt,name=ram,proto3" json:"ram,omitempty"`
+	Gpus     []*GPU     `protobuf:"bytes,6,rep,name=gpus,proto3" json:"gpus,omitempty"`
+	Storages []*Storage `protobuf:"bytes,7,rep,name=storages,proto3" json:"storages,omitempty"`
+	Screen   *Screen    `protobuf:"bytes,8,opt,name=screen,proto3" json:"screen,omitempty"`
+	Keyboard *Keyboard  `protobuf:"bytes,9,opt,name=keyboard,proto3" json:"keyboard,omitempty"`
 	// Types that are assignable to Weight:
 	//	*Laptop_WeightKg
 	//	*Laptop_WeightLb
@@ -103,42 +102,42 @@ func (x *Laptop) GetName() string {
 	return ""
 }
 
-func (x *Laptop) GetCpu() *pb.CPU {
+func (x *Laptop) GetCpu() *CPU {
 	if x != nil {
 		return x.Cpu
 	}
 	return nil
 }
 
-func (x *Laptop) GetRam() *pb.Memory {
+func (x *Laptop) GetRam() *Memory {
 	if x != nil {
 		return x.Ram
 	}
 	return nil
 }
 
-func (x *Laptop) GetGpus() []*pb.GPU {
+func (x *Laptop) GetGpus() []*GPU {
 	if x != nil {
 		return x.Gpus
 	}
 	return nil
 }
 
-func (x *Laptop) GetStorages() []*pb.Storage {
+func (x *Laptop) GetStorages() []*Storage {
 	if x != nil {
 		return x.Storages
 	}
 	return nil
 }
 
-func (x *Laptop) GetScreen() *pb.Screen {
+func (x *Laptop) GetScreen() *Screen {
 	if x != nil {
 		return x.Screen
 	}
 	return nil
 }
 
-func (x *Laptop) GetKeyboard() *pb.Keyboard {
+func (x *Laptop) GetKeyboard() *Keyboard {
 	if x != nil {
 		return x.Keyboard
 	}
@@ -244,9 +243,11 @@ var file_laptop_message_proto_rawDesc = []byte{
 	0x61, 0x74, 0x65, 0x64, 0x5f, 0x61, 0x74, 0x18, 0x0e, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e,
 	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e,
 	0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x09, 0x75, 0x70, 0x64, 0x61, 0x74,
-	0x65, 0x64, 0x41, 0x74, 0x42, 0x08, 0x0a, 0x06, 0x77, 0x65, 0x69, 0x67, 0x68, 0x74, 0x42, 0x15,
-	0x5a, 0x13, 0x65, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x67, 0x72,
-	0x70, 0x63, 0x2f, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x65, 0x64, 0x41, 0x74, 0x42, 0x08, 0x0a, 0x06, 0x77, 0x65, 0x69, 0x67, 0x68, 0x74, 0x42, 0x29,
+	0x5a, 0x27, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x77, 0x64, 0x68,
+	0x61, 0x66, 0x69, 0x6e, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x74, 0x65, 0x63, 0x68, 0x2d,
+	0x73, 0x63, 0x68, 0x6f, 0x6f, 0x6c, 0x2f, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
@@ -264,12 +265,12 @@ func file_laptop_message_proto_rawDescGZIP() []byte {
 var file_laptop_message_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_laptop_message_proto_goTypes = []interface{}{
 	(*Laptop)(nil),                // 0: Laptop
-	(*pb.CPU)(nil),                // 1: CPU
-	(*pb.Memory)(nil),             // 2: Memory
-	(*pb.GPU)(nil),                // 3: GPU
-	(*pb.Storage)(nil),            // 4: Storage
-	(*pb.Screen)(nil),             // 5: Screen
-	(*pb.Keyboard)(nil),           // 6: Keyboard
+	(*CPU)(nil),                   // 1: CPU
+	(*Memory)(nil),                // 2: Memory
+	(*GPU)(nil),                   // 3: GPU
+	(*Storage)(nil),               // 4: Storage
+	(*Screen)(nil),                // 5: Screen
+	(*Keyboard)(nil),              // 6: Keyboard
 	(*timestamppb.Timestamp)(nil), // 7: google.protobuf.Timestamp
 }
 var file_laptop_message_proto_depIdxs = []int32{
@@ -292,6 +293,11 @@ func file_laptop_message_proto_init() {
 	if File_laptop_message_proto != nil {
 		return
 	}
+	file_processor_message_proto_init()
+	file_memory_message_proto_init()
+	file_storage_message_proto_init()
+	file_screen_message_proto_init()
+	file_keyboard_message_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_laptop_message_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Laptop); i {
